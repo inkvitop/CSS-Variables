@@ -59,23 +59,14 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  filter: saturate(var(--photo-saturation));
-}
-.photos-blur {
-  filter: blur(var(--photo-blur));
-}
-.photos-inversion {
-  filter: invert(var(--photo-inversion));
-}
-.photos-sepia {
-  filter: sepia(var(--photo-sepia));
-  display: flex;
-  justify-content: center;
-
 }
 .photos-photo {
   width: var(--photo-size);
   height: var(--photo-size);
-  filter: hue-rotate(var(--photo-tone));
+  filter: hue-rotate(var(--photo-tone)) 
+          sepia(var(--photo-sepia)) 
+          invert(var(--photo-inversion))
+          blur(var(--photo-blur))
+          saturate(var(--photo-saturation));
 }
 
